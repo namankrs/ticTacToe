@@ -1,5 +1,5 @@
 let {deepEqual,equal} = require("assert");
-let {generateBoard} = require("../src/lib.js");
+let {generateBoard,placeMoves} = require("../src/lib.js");
 
 describe('generateBoard',function(){
   it("should return filled board with given elements",function(){
@@ -14,5 +14,13 @@ describe('generateBoard',function(){
                           "   |   |   "]
     deepEqual(generateBoard([" "," "," "," "," "," "," "," "," ",]),expectedOutput);
   })
+})
 
+describe('placeMoves',function(){
+  it('should return the board with values after concatinating array with given move',function(){
+    let expectedOutput = ["_1_|_2_|_3_",
+                          "_4_|_ _|_ _",
+                          "   |   |   "]
+    deepEqual(placeMoves([1,2,3," "," "," "," "," "," "],4),expectedOutput);
+  })
 })
