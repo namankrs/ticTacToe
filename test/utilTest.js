@@ -1,7 +1,7 @@
 const {equal, deepEqual} = require("assert");
 
 const { randomNumberGenerator,
-       deleteElement,
+       deleteElement,symbol
 } = require("../src/util.js");
 
 
@@ -18,3 +18,15 @@ describe("test for deleteElement function",function(){
     deepEqual(deleteElement([1,2,3,4],1),[1,3,4]);
   });
 });
+
+
+describe('symbol',function(){
+  symbolToggler = symbol();
+  it('should return O for the first call',function(){
+    equal(symbolToggler(),"O");
+    equal(symbolToggler(),"X");
+    equal(symbolToggler(),"O");
+    equal(symbolToggler(),"X");
+
+  })
+})
