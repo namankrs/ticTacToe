@@ -3,7 +3,8 @@ const randomNumberGenerator = function(){
 }
 
 const deleteElement  = function(array,index) {
-  return array.splice(index,0);
+  array.splice(index,1);
+  return array;
 }
 
 module.exports = { randomNumberGenerator,deleteElement }; 
