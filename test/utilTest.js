@@ -12,7 +12,6 @@ describe("test for randomNumberGenerator function",function(){
   });
 });
 
-
 describe("test for deleteElement function",function(){
 
   it("should return an array after deleting the element from the given index",function(){
