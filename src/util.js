@@ -7,4 +7,12 @@ const deleteElement  = function(array,index) {
   return array;
 }
 
-module.exports = { randomNumberGenerator,deleteElement }; 
+const isWithin1to9 = function(numberToCheck){
+  return numberToCheck >= 1 && numberToCheck < 10;
+}
+
+const isValid = function(moves,moveToCheck){
+  return isWithin1to9(moveToCheck) && moves.includes(moveToCheck)
+}
+
+module.exports = { randomNumberGenerator,deleteElement,isWithin1to10,isValid }; 
