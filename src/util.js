@@ -15,4 +15,4 @@ const isValid = function(moves,moveToCheck){
   return isWithin1to9(moveToCheck) && moves.includes(moveToCheck)
 }
 
-module.exports = { randomNumberGenerator,deleteElement,isWithin1to10,isValid }; 
+module.exports = { randomNumberGenerator,deleteElement,isWithin1to9,isValid }; 
