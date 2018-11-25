@@ -26,4 +26,14 @@ const symbol = function() {
   }
 };
 
-module.exports = { randomNumberGenerator,deleteElement,isWithin1to9,isValid,symbol}; 
+const isSubset = function(superset,subset){
+  let result = false;
+
+  for(moveSet of subset){
+    if(superset.every(superset.includes,moveSet))
+      result = true;
+  }
+  return result;
+}
+
+module.exports = { randomNumberGenerator,deleteElement,isWithin1to9,isValid,symbol,isSubset}; 
