@@ -26,14 +26,17 @@ const symbol = function() {
   }
 };
 
-const isSubset = function(superset,subset){
-  let result = false;
+const doInclude = function(list,element){
+  return list.includes(element);
+}
 
+const isSubset = function(superset,subset){
+  doSupersetIncludes = doInclude.bind(null,superset);
   for(moveSet of subset){
-    if(superset.every(superset.includes,moveSet))
-      result = true;
+    if(moveSet.every(doSupersetIncludes))
+      return true;
   }
-  return result;
+  return false;
 }
 
 module.exports = { randomNumberGenerator,deleteElement,isWithin1to9,isValid,symbol,isSubset}; 

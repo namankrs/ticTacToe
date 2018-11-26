@@ -38,4 +38,7 @@ describe('isSubset',function(){
   it('should return false if superset doesnt contains subset',function(){
     deepEqual(isSubset([1,2,3],[[1,2,5],[2,3,4]]),false);
   })
+  it('should return true if superset contains subset',function(){
+    deepEqual(isSubset([1,2,3,4,6],[[4,5,6],[1,2,3]]),true);
+  })
 })
