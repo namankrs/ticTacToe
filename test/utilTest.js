@@ -19,6 +19,8 @@ describe("test for deleteElement function",function(){
   });
 });
 
+<<<<<<< HEAD
+=======
 
 describe('symbol',function(){
   symbolToggler = symbol();
@@ -42,3 +44,4 @@ describe('isSubset',function(){
     deepEqual(isSubset([1,2,3,4,6],[[4,5,6],[1,2,3]]),true);
   })
 })
+>>>>>>> 088f5a143c5320d891860afb75e2a424a81680c0
