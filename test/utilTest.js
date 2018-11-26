@@ -1,7 +1,7 @@
 const {equal, deepEqual} = require("assert");
 
 const { randomNumberGenerator,
-       deleteElement,
+       deleteElement,symbol,isSubset
 } = require("../src/util.js");
 
 
@@ -19,3 +19,26 @@ describe("test for deleteElement function",function(){
   });
 });
 
+<<<<<<< HEAD
+=======
+
+describe('symbol',function(){
+  symbolToggler = symbol();
+  it('should return O for the odd calls and X for the even calls',function(){
+    equal(symbolToggler(),"O");
+    equal(symbolToggler(),"X");
+    equal(symbolToggler(),"O");
+    equal(symbolToggler(),"X");
+
+  })
+})
+
+describe('isSubset',function(){
+  it('should return true if superset contains subset',function(){
+    deepEqual(isSubset([1,2,3],[[4,5,6],[1,2,3]]),true);
+  })
+  it('should return false if superset doesnt contains subset',function(){
+    deepEqual(isSubset([1,2,3],[[1,2,5],[2,3,4]]),false);
+  })
+})
+>>>>>>> 088f5a143c5320d891860afb75e2a424a81680c0
